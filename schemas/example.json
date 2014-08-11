@@ -1,0 +1,212 @@
+{
+  "title": "Matic Draft 4 Example",
+  "Description": "An example schema to demonstrate Matic",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "items": {
+    "allOf": [
+      {
+        "title": "Foo",
+        "description": "A foo schema",
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {
+          "url": {
+            "title": "A url",
+            "description": "An example url schema",
+            "type": "string",
+            "format": "uri",
+            "example": "http://github.com/mattyod/matic"
+          },
+          "list": {
+            "title": "A list",
+            "description": "A list of things",
+            "type": "array",
+            "example": [
+              "one",
+              "two",
+              "three"
+            ]
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      {
+        "title": "Bar",
+        "description": "A bar schema",
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {
+          "thing": {
+            "title": "thing",
+            "description": "a thing that uses a local pointer to an other thing for it's properties",
+            "type": "object",
+            "properties": {
+              "type": "integer"
+            }
+          },
+          "thing2": {
+            "type": "integer"
+          },
+          "otherThing": {
+            "id": "example",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "thing",
+          "thing2",
+          "otherThing"
+        ]
+      }
+    ],
+    "anyOf": [
+      {
+        "title": "Bish",
+        "description": "A bish schema",
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {
+          "one": {
+            "type": "number",
+            "description": "The number one",
+            "maximum": 1,
+            "minimum": 1
+          },
+          "two": {
+            "type": "number",
+            "description": "The number two",
+            "enum": [
+              2
+            ]
+          }
+        },
+        "required": [
+          "one",
+          "two"
+        ]
+      },
+      {
+        "title": "Bash",
+        "description": "A bash schema",
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "patternProperties": {
+          "/.*/": {
+            "title": "Just about anything",
+            "description": "An example pattern property schema",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 1000
+          },
+          "/.^/": {
+            "title": "Nothing",
+            "description": "Another example pattern property schema",
+            "type": null
+          }
+        },
+        "additionalProperties": true
+      },
+      {
+        "title": "Bosh",
+        "description": "A bosh schema",
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "definitions": {
+          "array": {
+            "title": "Array",
+            "description": "An array",
+            "type": "array"
+          },
+          "string": {
+            "title": "String",
+            "description": "A string",
+            "type": "string"
+          },
+          "number": {
+            "title": "Number",
+            "description": "A number",
+            "type": "number"
+          }
+        },
+        "properties": {
+          "myArray": {
+            "title": "Array",
+            "description": "An array",
+            "type": "array"
+          },
+          "myString": {
+            "title": "String",
+            "description": "A string",
+            "type": "string"
+          },
+          "myNumber": {
+            "title": "Number",
+            "description": "A number",
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "oneOf": [
+      {
+        "title": "Woo",
+        "description": "A Woo schema",
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {
+          "complexArray": {
+            "title": "An array",
+            "description": "All the rules",
+            "type": "array",
+            "maxItems": 100,
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "complexObject": {
+            "title": "An object",
+            "description": "All the rules",
+            "type": "object",
+            "minProperties": 1000,
+            "maxProperties": 10000
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "complexArray",
+          "complexObject"
+        ]
+      },
+      {
+        "title": "Hoo",
+        "description": "A Hoo schema",
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {
+          "complexArray": {
+            "title": "An array",
+            "description": "All the rules",
+            "type": "array",
+            "maxItems": 100,
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "complexObject": {
+            "title": "An object",
+            "description": "All the rules",
+            "type": "object",
+            "minProperties": 1000,
+            "maxProperties": 10000
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "complexArray",
+          "complexObject"
+        ]
+      }
+    ]
+  }
+}

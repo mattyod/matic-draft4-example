@@ -1,0 +1,21 @@
+{
+  "title": "Bash",
+  "description": "A bash schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "patternProperties": {
+    "/.*/": {
+      "title": "Just about anything",
+      "description": "An example pattern property schema",
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 1000
+    },
+    "/.^/": {
+      "title": "Nothing",
+      "description": "Another example pattern property schema",
+      "type": null
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Foo",
+  "description": "A foo schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "url": {
+      "title": "A url",
+      "description": "An example url schema",
+      "type": "string",
+      "format": "uri",
+      "example": "http://github.com/mattyod/matic"
+    },
+    "list": {
+      "title": "A list",
+      "description": "A list of things",
+      "type": "array",
+      "example": ["one", "two", "three"]
+    }
+  },
+  "required": ["url"]
+}

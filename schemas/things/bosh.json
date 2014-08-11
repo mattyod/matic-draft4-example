@@ -1,0 +1,34 @@
+{
+  "title": "Bosh",
+  "description": "A bosh schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "array": {
+      "title": "Array",
+      "description": "An array",
+      "type": "array"
+    },
+    "string": {
+      "title": "String",
+      "description": "A string",
+      "type": "string"
+    },
+    "number": {
+      "title": "Number",
+      "description": "A number",
+      "type": "number"
+    }
+  },
+  "properties": {
+    "myArray": {
+      "$ref": "#definitions/array"
+    },
+    "myString": {
+      "$ref": "#definitions/string"
+    },
+    "myNumber": {
+      "$ref": "#definitions/number"
+    }
+  }
+}
