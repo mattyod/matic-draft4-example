@@ -1,0 +1,6 @@
+{
+  "assets": ["js", "css"],
+  "index": {
+    "schemas": true
+  }
+}

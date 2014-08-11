@@ -1,0 +1,21 @@
+{
+  "title": "Matic Draft 4 Example",
+  "Description": "An example schema to demonstrate Matic",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "items": {
+    "allOf": [
+      { "$ref": "things/foo.json" },
+      { "$ref": "things/bar.json" }
+    ],
+    "anyOf": [
+      { "$ref": "things/bish.json" },
+      { "$ref": "things/bash.json" },
+      { "$ref": "things/bosh.json" }
+    ],
+    "oneOf": [
+      { "$ref": "things/woo.json" },
+      { "$ref": "things/hoo.json" }
+    ]
+  }
+}

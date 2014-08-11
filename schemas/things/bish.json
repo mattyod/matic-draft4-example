@@ -1,0 +1,20 @@
+{
+  "title": "Bish",
+  "description": "A bish schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "one": {
+      "type": "number",
+      "description": "The number one",
+      "maximum": 1,
+      "minimum": 1
+    },
+    "two": {
+      "type": "number",
+      "description": "The number two",
+      "enum": [2]
+    }
+  },
+  "required": ["one", "two"]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Bar",
+  "description": "A bar schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "thing": {
+      "title": "thing",
+      "description": "a thing that uses a local pointer to an other thing for it's properties",
+      "type": "object",
+      "properties": {
+        "$ref": "example"
+      }
+    },
+    "thing2": {
+      "$ref": "#/properties/otherThing"
+    },
+    "otherThing": {
+      "id": "example",
+      "type": "integer"
+    }
+  },
+  "required": ["thing", "thing2", "otherThing"]
+}
