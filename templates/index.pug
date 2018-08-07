@@ -26,6 +26,6 @@ html
           if typeof folder === 'object'
             h2= name
             ul
-              mixin indexFolders(folder, 3)
+              +indexFolders(folder, 3)
 
       include templates/includes/footer

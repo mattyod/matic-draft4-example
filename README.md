@@ -1,3 +1,8 @@
+Lakakucharita's notes:
+======================
+
+This is a fork of the original [example Matic project](https://github.com/mattyod/matic-draft4-example) that has been updated to use Pug instead of Jade.
+
 matic-draft4-example
 ====================
 
@@ -11,13 +16,13 @@ To build this example you will need to install the following two node packages:
 
 and
 
-[Jade](https://github.com/visionmedia/jade)
+[Pug](https://github.com/pugjs/pug)
 
 ## Installation
 Then you can download this repository with
 
 ```sh
-git clone https://github.com/mattyod/matic-draft4-example
+git clone https://github.com/lakakucharita/matic-draft4-example
 ```
 
 ## Building the example docs
