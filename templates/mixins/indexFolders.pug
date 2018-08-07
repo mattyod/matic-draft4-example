@@ -9,4 +9,4 @@ mixin indexFolders(folder, hLevel)
       - var subHeading = (hLevel + 1);
       li!=heading
         ul
-          mixin indexFolders(item, subHeading)
+          +indexFolders(item, subHeading)
