@@ -1,8 +1,3 @@
-Lakakucharita's notes:
-======================
-
-This is a fork of the original [example Matic project](https://github.com/mattyod/matic-draft4-example) that has been updated to use Pug instead of Jade.
-
 matic-draft4-example
 ====================
 
@@ -22,7 +17,7 @@ and
 Then you can download this repository with
 
 ```sh
-git clone https://github.com/lakakucharita/matic-draft4-example
+git clone https://github.com/mattyod/matic-draft4-example
 ```
 
 ## Building the example docs
